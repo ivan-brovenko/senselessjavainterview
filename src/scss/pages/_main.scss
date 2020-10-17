@@ -1,0 +1,24 @@
+.headline {
+  text-align: center;
+  font-size: 5vw;
+  font-family: sans-serif;
+  color: #ff0019;
+  position: relative;
+  top: -12vw;
+  text-shadow: 0.2vw 0.2vw 0.4vw #000000;
+}
+
+#navDemo {
+  margin-top: 46px;
+}
+
+.imageWidth {
+  width: 100vw;
+  height: 50vw;
+}
+
+@media (max-width: 600px) {
+  .imageWidth {
+    height: 150vw;
+  }
+}
