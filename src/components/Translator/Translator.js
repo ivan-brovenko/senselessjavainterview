@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch} from 'react-redux';
-import {loadData, putData} from '../../redux/actions';
+import {loadData, putData} from '../../redux/actionsOld';
 import {useForm} from 'react-hook-form';
 import { connect } from 'react-redux';
 
@@ -16,15 +16,15 @@ function Translator(props) {
         <div className="content">
             <form className="translateForm" onSubmit={handleSubmit(onSubmit)}>
                 <input className="langInput" type="text" name="from" placeholder="FROM"
-                       ref={register} list="languages"/>
+                       {...register('value_name')} list="languages"/>
                 <input className="langInput" type="text" name="to" placeholder="TO"
-                       ref={register} list="languages"/>
+                       {...register('value_name')} list="languages"/>
                 <datalist id="languages">
                     <option value="en">EN</option>
                     <option value="ru">RU</option>
                 </datalist>
 
-                <textarea name="text" ref={register}/>
+                <textarea name="text" {...register('value_name')}/>
                 <input className="form bt" type="submit" value="TRANSLATE"/>
                 <textarea name="translated" disabled  value={props.data}/>
             </form>

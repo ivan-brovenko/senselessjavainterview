@@ -12,7 +12,7 @@ module.exports = {
     devtool: 'inline-source-map',
 
     devServer: {
-        contentBase: './dist',
+        static: './dist',
         historyApiFallback: true
     },
     plugins: [
@@ -48,5 +48,6 @@ module.exports = {
                 ]
             }
         ]
-    }
+    },
+    mode: 'development'
 };

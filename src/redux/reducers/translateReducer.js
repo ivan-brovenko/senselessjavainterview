@@ -1,4 +1,4 @@
-import {PUT_DATA} from "../actions";
+import {PUT_DATA} from "../actionsOld";
 
 const initialState = {
     data: ""
